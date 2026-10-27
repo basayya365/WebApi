@@ -19,6 +19,7 @@ namespace WebApi.Controllers
             _accountService = accountService;
         }
         [HttpPost("authenticate")]
+
         public async Task<IActionResult> AuthenticateAsync(AuthenticationRequest request)
         {
             return Ok(await _accountService.AuthenticateAsync(request, GenerateIPAddress()));
